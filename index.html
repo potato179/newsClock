@@ -45,8 +45,8 @@
             <div id = "nmsg1" class = "bold white" style = "display: none; font-size: 500%;">1</div>
             <div id = "nmsg2" class = "bold white" style = "display: none; font-size: 500%;">2</div>
         </div>
-        <div class = "center" style = "position: fixed; bottom: 0;  width: 100%; background-color: black;">
-            <h1 class = "white" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">시간 표출 오류</span>&nbsp;&nbsp;<i class="fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br>
+        <div class = "center" style = "position: fixed; bottom: 0; width: 100%; background-color: white;">
+            <h1 class = "black" style = "display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">시간 표출 오류</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br>
         </div>
         
     </div>
@@ -163,11 +163,11 @@
             if(hour*1 === 11){
                 if(min*1 <= 50){
                     endTime(11, 50, hour, min);
-                    $("#startTime").html("09:00");
-                    $("#endTime").html("09:50");
-                    $("#timeName").html("1교시");
+                    $("#startTime").html("11:00");
+                    $("#endTime").html("11:50");
+                    $("#timeName").html("3교시");
                 }
-                if(min*1 === 30){
+                if(min*1 === 49){
                     showPopup();
                     $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
                     $("#nmsg2").html("미리 준비하시기 바랍니다.");
@@ -175,8 +175,8 @@
                 if(50 <= min*1 && min*1 <= 55){
                     hidePopup();
                     endTime(11, 55, hour, min);
-                    $("#startTime").html("09:50");
-                    $("#endTime").html("10:00");
+                    $("#startTime").html("11:50");
+                    $("#endTime").html("12:00");
                     $("#timeName").html("휴식");
                 }
                 if(min*1 === 59){
@@ -188,9 +188,9 @@
             if(hour*1 === 12){
                 if(min*1 <= 50){
                     endTime(12, 50, hour, min);
-                    $("#startTime").html("09:00");
-                    $("#endTime").html("09:50");
-                    $("#timeName").html("1교시");
+                    $("#startTime").html("12:00");
+                    $("#endTime").html("12:50");
+                    $("#timeName").html("4교시");
                 }
                 if(min*1 === 49){
                     showPopup();
