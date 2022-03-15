@@ -307,6 +307,11 @@
                 }
             }
             if(hour*1 === 19){
+                if(min*1 === 9){
+                    showPopup();
+                    $("#nmsg1").html("잠시후 <span class = 'yellow'>식사이동</span>이 시작됩니다.");
+                    $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                }
                 if(min*1 <= 50){
                     endTime(19, 50, hour, min);
                     $("#startTime").html("18:35");
